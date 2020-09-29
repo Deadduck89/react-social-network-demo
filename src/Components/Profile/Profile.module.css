@@ -2,3 +2,6 @@
     grid-area: c;
     background-color: antiquewhite;
 }
+.mainimg img{
+    height: 300px;
+}
