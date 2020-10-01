@@ -4,12 +4,15 @@ import classes from './MyPosts.module.css';
 
 const MyPosts = () => {
     return <div className={classes.content}>
-        <div>
-            My Posts
+        <div className={classes.postsBlock}>
+            <h3>My Posts</h3>
             <div>
-                <textarea></textarea>
-                <button>Add Post</button>
-                <button>Remove</button>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add Post</button>
+                </div>
             </div>
             <div className={classes.posts}>
                 <Post message='Hi, how are you?' likesCount='15'/>
