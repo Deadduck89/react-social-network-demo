@@ -1,9 +1,11 @@
 .header {
     grid-area: h;
     background-color: aquamarine;
+    border-radius: 5px;
 }
 
 .header img {
     width: 65px;
+    padding-left: 10px;
 
 }

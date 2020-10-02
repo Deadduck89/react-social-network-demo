@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.module.css';
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
@@ -8,15 +8,16 @@ import Music from "./Components/Music/Music";
 import News from "./Components/News/News";
 import Settings from "./Components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
+import classes from "./App.module.css"
 
 
 const App = () => {
     return (
     <BrowserRouter>
-        <div className='app-wrapper'>
+        <div className={classes.appWrapper}>
             <Header/>
             <Navbar/>
-            <div className='app-wrapper-content'>
+            <div className={classes.appWrapperContent}>
                 <Route path='/dialogs' component={Dialogs}/>
                 <Route path='/profile' component={Profile}/>
                 <Route path='/news' component={News}/>

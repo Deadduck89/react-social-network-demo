@@ -1,13 +1,18 @@
 .nav {
     grid-area: n;
-    background-color: darkgreen;
+    background-color: aquamarine;
+    border-radius: 5px;
 }
 
 .item a{
-    color: white;
+    color: black;
+    padding-left: 20px;
+    font-family: Arial;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 
 .item a.active {
-    color: gold;
+    text-decoration: underline;
 }
