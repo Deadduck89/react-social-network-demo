@@ -12,6 +12,8 @@ import {BrowserRouter, Route} from "react-router-dom";
 import classes from "./App.module.css"
 
 
+//Подключил ПК
+
 const App = (props) => {
     return (
     <BrowserRouter>
