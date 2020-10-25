@@ -12,14 +12,12 @@ import {BrowserRouter, Route} from "react-router-dom";
 import classes from "./App.module.css"
 
 
-//Подключил ПК
-
 const App = (props) => {
     return (
     <BrowserRouter>
         <div className={classes.appWrapper}>
             <Header/>
-            <Navbar/>
+            <Navbar state={props.state.navbar}/>
             <div className={classes.appWrapperContent}>
                 <Route path='/news' component={News}/>
                 <Route path='/music' component={Music}/>
@@ -32,6 +30,8 @@ const App = (props) => {
                            state={props.state.profilePage}/>}/>
                 <Route path='/friends' component={Friends}/>
             </div>
+
+
         </div>
     </BrowserRouter>
     )

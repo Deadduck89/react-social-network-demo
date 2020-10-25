@@ -21,9 +21,9 @@ let state = {
     },
     navbar: {
         friends: [
-            {id:1 ,avatar: '...' , name:'Andrew' },
-            {id:2 ,avatar: '...', name:'Sergey' },
-            {id:3 ,avatar: '...', name: 'Irina'}
+            {id:1 ,avatar: 'https://clck.ru/RaH6Z' , bfriend:'Andrew' },
+            {id:2 ,avatar: 'https://clck.ru/RaH7G', bfriend:'Sergey' },
+            {id:3 ,avatar: 'https://clck.ru/RaH87', bfriend: 'Irina'}
         ]
     }
 }
