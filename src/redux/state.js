@@ -1,8 +1,8 @@
 let state = {
     profilePage: {
         posts: [
-            {id: 1, post: 'Hi, how are you?', likesCount: 15},
-            {id: 2, post: "It's my first post", likesCount: 20},
+            {id: 1, post: 'Hi, how are you?', likesCount: 15,avatar: 'https://clck.ru/RaH6Z'},
+            {id: 2, post: "It's my first post", likesCount: 20,avatar: 'https://clck.ru/RaH7G'},
         ]
     },
     dialogsPage: {
@@ -19,11 +19,11 @@ let state = {
             {id: 5, user: 'Zhop'}
         ]
     },
-    navbar: {
+    navbarPage: {
         friends: [
-            {id:1 ,avatar: 'https://clck.ru/RaH6Z' , bfriend:'Andrew' },
-            {id:2 ,avatar: 'https://clck.ru/RaH7G', bfriend:'Sergey' },
-            {id:3 ,avatar: 'https://clck.ru/RaH87', bfriend: 'Irina'}
+            {id:1 ,bfavatar: 'https://clck.ru/RaH6Z' , bfriend:'Andrew' },
+            {id:2 ,bfavatar: 'https://clck.ru/RaH7G', bfriend:'Sergey' },
+            {id:3 ,bfavatar: 'https://clck.ru/RaH87', bfriend: 'Irina'}
         ]
     }
 }

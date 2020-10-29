@@ -1,25 +1,21 @@
 import React from "react";
 import classes from "./BestFriends.module.css";
-import bestFriendAvatar from "./BFAvatar/BFAvatar";
-import bestFriendName from "./BFName/BFName";
+import bestFriendElements from "./BFElements/BFElements";
 
 const BestFriends = (props) => {
-    let bestFriendAvatarElements = props.state.friends.map(
-        avatar => <bestFriendAvatar avatar={avatar.avatar}/>
-    );
-    let bestFriendNameElements = props.state.friends.map(
-        bfriend => <bestFriendName bfriend={bfriend.bfriend}/>
+    let bestFriendElements = props.friends.map(
+        bfriendselm => <bestFriendElements
+            bfpicture={bfriendselm.bfavatar}
+            bfname={bfriendselm.bfriend}/>
     );
 
 
     return (
         <div className={classes.bestfriends}>
             <div className={classes.bfavatar}>
-                { bestFriendAvatarElements }
+                { bestFriendElements }
             </div>
-            <div className={classes.bfname}>
-                { bestFriendNameElements }
-            </div>
+
         </div>
     )
 }

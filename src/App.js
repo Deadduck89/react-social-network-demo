@@ -17,7 +17,7 @@ const App = (props) => {
     <BrowserRouter>
         <div className={classes.appWrapper}>
             <Header/>
-            <Navbar state={props.state.navbar}/>
+            <Navbar state={props.state.navbarPage}/>
             <div className={classes.appWrapperContent}>
                 <Route path='/news' component={News}/>
                 <Route path='/music' component={Music}/>
@@ -30,11 +30,8 @@ const App = (props) => {
                            state={props.state.profilePage}/>}/>
                 <Route path='/friends' component={Friends}/>
             </div>
-
-
         </div>
     </BrowserRouter>
     )
 }
-
 export default App;

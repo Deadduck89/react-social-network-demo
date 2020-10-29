@@ -4,7 +4,11 @@ import classes from './MyPosts.module.css';
 
 const MyPosts = (props) => {
 
-    let postElements = props.post.map(post => <Post message={post.post} likesCount={post.likesCount}/>)
+    let postElements = props.post.map(
+        post => <Post message={post.post}
+                      likesCount={post.likesCount}
+                      avatar={post.avatar}/>
+                      )
 
     return <div className={classes.content}>
         <div className={classes.postsBlock}>
