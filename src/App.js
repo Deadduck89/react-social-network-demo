@@ -17,7 +17,7 @@ const App = (props) => {
     <BrowserRouter>
         <div className={classes.appWrapper}>
             <Header/>
-            <Navbar state={props.state.navbarPage}/>
+            <Navbar state={props.state.sidebar}/>
             <div className={classes.appWrapperContent}>
                 <Route path='/news' component={News}/>
                 <Route path='/music' component={Music}/>

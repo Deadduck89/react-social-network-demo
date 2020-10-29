@@ -7,9 +7,9 @@ let state = {
     },
     dialogsPage: {
         messages: [
-            {id: 1, message: 'Hi!'},
-            {id: 2, message: 'Ti mne bil kak brat!'},
-            {id: 3, message: 'Tut zhop'},
+            {message: 'Hi!'},
+            {message: 'Ti mne bil kak brat!'},
+            {message: 'Tut zhop'},
         ],
         dialogs: [
             {id: 1, user: 'Andrew'},
@@ -19,11 +19,11 @@ let state = {
             {id: 5, user: 'Zhop'}
         ]
     },
-    navbarPage: {
+    sidebar: {
         friends: [
-            {id:1 ,bfavatar: 'https://clck.ru/RaH6Z' , bfriend:'Andrew' },
-            {id:2 ,bfavatar: 'https://clck.ru/RaH7G', bfriend:'Sergey' },
-            {id:3 ,bfavatar: 'https://clck.ru/RaH87', bfriend: 'Irina'}
+            {bfavatar: 'https://clck.ru/RaH6Z' , bfriend:'Andrew' },
+            {bfavatar: 'https://clck.ru/RaH7G', bfriend:'Sergey' },
+            {bfavatar: 'https://clck.ru/RaH87', bfriend: 'Irina'}
         ]
     }
 }

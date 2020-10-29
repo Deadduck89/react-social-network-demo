@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./../BestFriends.module.css"
 
-const bestFriendElements = (props) => {
+const BestFriendElements = (props) => {
+    console.log(props)
     return (
         <div>
             <div className={classes.bfavatar}>
@@ -13,4 +14,4 @@ const bestFriendElements = (props) => {
         </div>
     )
 }
-export default bestFriendElements
+export default BestFriendElements

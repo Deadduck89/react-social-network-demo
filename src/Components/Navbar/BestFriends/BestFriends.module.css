@@ -1,9 +1,4 @@
-.bfavatar {
-    height: 30px;
-    width: 30px;
-    border-radius: 30px;
 
-}
 .bestfriends {
     display: grid;
 }
@@ -11,4 +6,14 @@
     height: 30px;
     width: 30px;
     border-radius: 30px;
+}
+.friends a{
+    color: black;
+    padding-left: 20px;
+    font-family: Arial;
+    font-size: 30px;
+    text-decoration: none;
+}
+.friends a.active{
+    text-decoration: underline;
 }

@@ -1,36 +1,27 @@
 import React from "react";
 import classes from "./BestFriends.module.css";
-import bestFriendElements from "./BFElements/BFElements";
+import BestFriendElements from "./BFElements/BFElements.jsx";
+import {NavLink} from "react-router-dom";
 
 const BestFriends = (props) => {
-    let bestFriendElements = props.friends.map(
-        bfriendselm => <bestFriendElements
-            bfpicture={bfriendselm.bfavatar}
-            bfname={bfriendselm.bfriend}/>
-    );
 
-
+    let bfElement = props.bfriends.map(
+        bfriends => <BestFriendElements bfpicture={bfriends.bfavatar}
+                                        bfname={bfriends.bfriend}/>
+                                        )
     return (
-        <div className={classes.bestfriends}>
-            <div className={classes.bfavatar}>
-                { bestFriendElements }
+        <div>
+            <div className={classes.friends}>
+                <NavLink to='/friends' activeClassName={classes.active}>Friends</NavLink>
             </div>
-
+            <div className={classes.bestfriends}>
+                <div>
+                    {bfElement}
+                </div>
+            </div>
         </div>
+
     )
 }
-    /*return (
-        <div className={classes.bestfriends}>
-        <div className={classes.friendavatar}>
-
-            <img src='https://clck.ru/RaH87' />
-        </div>
-        <div className={classes.friendname}>
-
-            <h4>Zhop</h4>
-        </div>
-        </div>
-    )*/
-
 
 export default BestFriends

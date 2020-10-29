@@ -1,4 +1,4 @@
-.nav {
+.navbar {
     grid-area: n;
     background-color: aquamarine;
     border-radius: 5px;
@@ -15,11 +15,4 @@
 
 .item a.active {
     text-decoration: underline;
-}
-.friends a{
-    color: black;
-    padding-left: 20px;
-    font-family: Arial;
-    font-size: 30px;
-    text-decoration: none;
 }
