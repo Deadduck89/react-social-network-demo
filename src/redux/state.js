@@ -12,11 +12,11 @@ let state = {
             {message: 'Tut zhop'},
         ],
         dialogs: [
-            {id: 1, user: 'Andrew'},
-            {id: 2, user: 'Igor'},
-            {id: 3, user: 'Sergey'},
-            {id: 4, user: 'Irina'},
-            {id: 5, user: 'Zhop'}
+            {id: 1, user: 'Andrew', avatar: 'https://clck.ru/RaH6Z'},
+            {id: 2, user: 'Igor', avatar: 'https://clck.ru/RQNNi' },
+            {id: 3, user: 'Sergey', avatar: 'https://clck.ru/RaH7G'},
+            {id: 4, user: 'Irina', avatar: 'https://clck.ru/RaH87'},
+            {id: 5, user: 'Zhop', avatar: 'https://clck.ru/RhWYy'}
         ]
     },
     sidebar: {

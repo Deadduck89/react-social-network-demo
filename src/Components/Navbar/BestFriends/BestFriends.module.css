@@ -1,13 +1,12 @@
 
-.bestfriends {
-    display: grid;
-}
+
 .bfavatar img {
-    height: 30px;
-    width: 30px;
-    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
 }
 .friends a{
+    margin-top: 25px;
     color: black;
     padding-left: 20px;
     font-family: Arial;
@@ -17,3 +16,19 @@
 .friends a.active{
     text-decoration: underline;
 }
+.friends {
+    display: grid;
+    grid-template-columns: 30px 30px;
+}
+.bfelement {
+    padding-left: 20px;
+    display: grid;
+    grid-template-rows: 40px;
+}
+.bfname {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+

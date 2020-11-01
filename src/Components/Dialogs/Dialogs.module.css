@@ -1,6 +1,6 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 6fr 6fr;
 
 }
 .dialogItems a{
@@ -8,8 +8,12 @@
     padding-left: 20px;
     color: black;
     font-family: Arial;
-    font-size: 17px;
+    font-size: 20px;
 
+}
+.dialogItems {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .dialogItems a.active{
     text-decoration: underline;
@@ -17,6 +21,8 @@
 .messages {
     padding: 10px;
 }
-.messages .message {
-
+.dialog img {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
 }
