@@ -1,6 +1,9 @@
 
-
-.bfavatar img {
+.bfavatar {
+    height: 40px;
+    width: 40px;
+}
+.bfavatar img{
     height: 40px;
     width: 40px;
     border-radius: 40px;
@@ -17,18 +20,23 @@
     text-decoration: underline;
 }
 .friends {
-    display: grid;
-    grid-template-columns: 30px 30px;
+    margin-top: 20px;
 }
 .bfelement {
-    padding-left: 20px;
-    display: grid;
-    grid-template-rows: 40px;
+    margin: 0;
 }
 .bfname {
+    margin: 0;
     font-family: Arial;
     font-size: 16px;
     font-weight: bold;
+}
+.bestfriends {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+
 }
 
 

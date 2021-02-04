@@ -15,9 +15,7 @@ const BestFriends = (props) => {
                 <NavLink to='/friends' activeClassName={classes.active}>Friends</NavLink>
             </div>
             <div className={classes.bestfriends}>
-                <div>
                     {bfElement}
-                </div>
             </div>
         </div>
 
