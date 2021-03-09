@@ -12,23 +12,20 @@ import classes from "./App.module.css"
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 
 
-const App = (props) => {
-    console.log(props)
+const App = ( ) => {
     return (
     <BrowserRouter>
         <div className={classes.appWrapper}>
             <Header/>
-            <Navbar state={props.state.sidebar}/>
+            <Navbar/>
             <div className={classes.appWrapperContent}>
                 <Route path='/news' component={News}/>
                 <Route path='/music' component={Music}/>
                 <Route path='/settings' component={Settings}/>
                 <Route path='/dialogs'
-                       render={ () => <DialogsContainer
-                           /*store={props.store}*//>}/>
+                       render={ () => <DialogsContainer/>}/>
                 <Route path='/profile'
-                       render={ () => <Profile
-                           /*store={props.store}*//>}/>
+                       render={ () => <Profile/>}/>
                 <Route path='/friends' component={Friends}/>
             </div>
         </div>

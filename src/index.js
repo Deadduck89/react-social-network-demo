@@ -11,7 +11,7 @@ let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <Provider store={store}>
-            <App state={state}/>
+            <App/>
             </Provider>
         </React.StrictMode>,
         document.getElementById('root')
