@@ -7,7 +7,6 @@ import store from "./redux/redux-store";
 import {Provider} from "react-redux";
 
 
-let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <Provider store={store}>
@@ -16,13 +15,7 @@ let rerenderEntireTree = (state) => {
         </React.StrictMode>,
         document.getElementById('root')
     );
-}
-rerenderEntireTree(store.getState());
 
-store.subscribe(() => {
-    let state = store.getState();
-    rerenderEntireTree(state);
-});
 
 
 // If you want your app to work offline and load faster, you can change
