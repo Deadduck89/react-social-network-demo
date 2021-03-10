@@ -1,9 +1,9 @@
 
 let initialState = {
     friends: [
-        {bfavatar: 'https://clck.ru/RaH6Z' , bfriend:'Andrew' },
-        {bfavatar: 'https://clck.ru/RaH7G', bfriend:'Sergey' },
-        {bfavatar: 'https://clck.ru/RaH87', bfriend: 'Irina'}
+        {id:1, bfavatar: 'https://clck.ru/RaH6Z' , bfriend:'Andrew' },
+        {id: 2,bfavatar: 'https://clck.ru/RaH7G', bfriend:'Sergey' },
+        {id:3, bfavatar: 'https://clck.ru/RaH87', bfriend: 'Irina'}
     ]
 }
 

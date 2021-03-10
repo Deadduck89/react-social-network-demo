@@ -6,7 +6,8 @@ import {NavLink} from "react-router-dom";
 const BestFriends = (props) => {
 
     let bfElement = props.friends.map(
-        friends => <BestFriendElements bfpicture={friends.bfavatar}
+        friends => <BestFriendElements key={friends.id}
+                                       bfpicture={friends.bfavatar}
                                         bfname={friends.bfriend}/>
                                         )
     return (

@@ -18,16 +18,17 @@ const profileReducer = (state = initialState,action) => {
                 "likesCount": 0,
                 "avatar": 'https://clck.ru/RaH6Z'
             };
-            let stateCopy = {...state};
-            stateCopy.posts = [...state.posts];
-            stateCopy.posts.push( newPost );
-            stateCopy.newPostText = ' ';
-            return stateCopy;
+            return {
+                ...state,
+                posts: [...state.posts,newPost],
+                newPostText: ' '};
         }
         case UPDATE_NEW_POST_TEXT: {
-            let stateCopy = {...state};
-            stateCopy.newPostText = action.postAreaText;
-            return stateCopy;}
+            return {
+                ...state,
+                newPostText: action.postAreaText
+            };
+        }
         default:
             return state;
         }
