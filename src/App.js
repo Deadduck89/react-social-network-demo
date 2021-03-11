@@ -10,6 +10,7 @@ import Friends from "./Components/Friends/Friends"
 import {BrowserRouter, Route} from "react-router-dom";
 import classes from "./App.module.css"
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
+import UsersContainer from "./Components/Users/UsersContainer";
 
 
 const App = ( ) => {
@@ -26,7 +27,9 @@ const App = ( ) => {
                        render={ () => <DialogsContainer/>}/>
                 <Route path='/profile'
                        render={ () => <Profile/>}/>
-                <Route path='/friends' component={Friends}/>
+                <Route path='/users'
+                       render={ () => <UsersContainer/>}/>
+                <Route path='/friends' render={ () => <Friends/>}/>
             </div>
         </div>
     </BrowserRouter>
