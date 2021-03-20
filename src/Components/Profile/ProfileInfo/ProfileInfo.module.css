@@ -1,7 +1,28 @@
 
 .mainimg img {
+    position: absolute;
     height: 300px;
+    width: 900px;
+    z-index: 1;
 }
 .descriptionBlock {
-    padding: 10px;
+    position: relative;
+    padding-top: 160px;
+    padding-left: 20px;
+    z-index: 10;
+}
+.descriptionBlock img{
+
+}
+.avatar {
+    height:150px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: aliceblue;
+}
+
+.contact img {
+    height: 15px;
+    padding: 5px 5px 0px 5px;
 }
