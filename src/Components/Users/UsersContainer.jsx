@@ -8,7 +8,6 @@ import {
     setTotalUsersCount,
     unfollow, toggleFollowingProgress
 } from "../../redux/users-reducer";
-import * as axios from "axios";
 import Users from "./Users";
 import Preloader from "../Common/Preloader.jsx";
 import {usersAPI} from "../../API/API";
