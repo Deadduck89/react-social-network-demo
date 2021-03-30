@@ -34,10 +34,13 @@ export const usersAPI = {
             return response.data
         } )
     },
+
+
+}
+export const authAPI = {
     getAuthUserData() {
         return instance.get( `auth/me` ).then( response => {
             return response.data
         } )
     }
-
 }
