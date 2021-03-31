@@ -11,6 +11,7 @@ import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import UsersContainer from "./Components/Users/UsersContainer.jsx";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
+import LoginPage from "./Components/Login/Login";
 
 
 const App = ( ) => {
@@ -30,6 +31,7 @@ const App = ( ) => {
                 <Route path='/users'
                        render={ () => <UsersContainer/>}/>
                 <Route path='/friends' render={ () => <Friends/>}/>
+                <Route path='/login' render={() => <LoginPage/>}/>
             </div>
         </div>
     </BrowserRouter>
