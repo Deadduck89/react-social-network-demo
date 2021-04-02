@@ -10,6 +10,7 @@ import websiteIcon from '../../../assets/social-icons/iconfinder_SocialMedia_Web
 import mainLinkIcon from '../../../assets/social-icons/iconfinder__google_chrome_2560108.png';
 import vkIcon from '../../../assets/social-icons/iconfinder_vk_853340.png';
 import userPhoto from '../../../assets/img/no-avatar.png'
+import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -24,6 +25,7 @@ const ProfileInfo = (props) => {
                 {props.profile.photos.large ?
                 <img src={props.profile.photos.large} className={classes.avatar}/>
                 : <img src={userPhoto} className={classes.avatar}/>}
+                <ProfileStatus status='Hello!'/>
                 <div className={classes.fullName}>
                     Меня зовут {props.profile.fullName}
                 </div>
