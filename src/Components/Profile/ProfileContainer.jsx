@@ -32,7 +32,9 @@ class ProfileContainer extends React.Component {
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
-    state :state.profilePage.status
+    status :state.profilePage.status
 });
 
-export default compose( connect( mapStateToProps, {getUserProfile, getStatus, updateStatus} ), withRouter )( ProfileContainer );
+export default compose(
+    connect( mapStateToProps, {getUserProfile, getStatus, updateStatus} ),
+    withRouter )( ProfileContainer );
