@@ -1,5 +1,6 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
+import {authAPI} from "../../API/API";
 
 const LoginForm = (props) => {
     return (
@@ -19,12 +20,17 @@ const LoginForm = (props) => {
         </form>
     )
 }
-const LoginReduxForm = reduxForm({
-    form:'login'
-})(LoginForm)
+
+const LoginReduxForm = reduxForm({form:'login'})(LoginForm)
+
 const Login = (props) => {
     const onSubmit = (formData=>{
         console.log(formData)
+        authAPI.loginUser(formData.login, formData.login).then( data =>{
+        if (data.resultCode == 0) {
+            console.log('Success'+ data.data.userId)
+        }
+    })
     })
     return (
     <div>
@@ -33,5 +39,6 @@ const Login = (props) => {
     </div>
     )
 }
+
 
 export default Login;
