@@ -2,6 +2,7 @@ import React from "react";
 import classes from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Messages/Messages";
+import {Field, reduxForm} from "redux-form";
 
 const Dialogs = (props) => {
 
@@ -17,38 +18,37 @@ const Dialogs = (props) => {
         message => <Message key={message.id}
                             message={message.message}/>
     );
-
-    let newMessageBody = state.newMessageBody;
-
-    let onSendMessageClick = () => {
-        props.sendMessage();
-    };
-
-    let onNewMessageChange = (e) => {
-        let body = e.target.value;
-        props.updateNewMessageBody(body);
+    let addNewMessage = (values) => {
+        props.sendMessage(values.newMessageBody)
     }
 
 
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogItems}>
-                { dialogElements }
+                {dialogElements}
             </div>
             <div className={classes.messages}>
-                <div>{ messagesElements }</div>
-                <div>
-                    <textarea
-                        onChange={onNewMessageChange}
-                        value={newMessageBody}
-                        placeholder='Enter your message'/>
-                </div>
-                <div>
-                    <button onClick={onSendMessageClick}>Send Message</button>
-                </div>
+                <div>{messagesElements}</div>
+
+                <AddMessageReduxForm onSubmit={addNewMessage}/>
             </div>
         </div>
     )
 }
+
+const AddMessageForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <div>
+                <Field component="textarea" name="newMessageBody" placeholder="Enter your message"/>
+            </div>
+            <div>
+                <button>Send</button>
+            </div>
+        </form>
+    )
+}
+const AddMessageReduxForm = reduxForm( {form: 'dialogAddMessageForm'} )( AddMessageForm )
 
 export default Dialogs;
