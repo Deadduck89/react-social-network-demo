@@ -12,8 +12,8 @@ import vkIcon from '../../../assets/social-icons/iconfinder_vk_853340.png';
 import userPhoto from '../../../assets/img/no-avatar.png'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = (props) => {
-    if (!props.profile) {
+const ProfileInfo = ({profile, status, updateStatus}) => {
+    if (!profile) {
         return <Preloader/>
     }
     return (
@@ -22,56 +22,56 @@ const ProfileInfo = (props) => {
                 <img src='https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png'/>
             </div>
             <div className={classes.descriptionBlock}>
-                {props.profile.photos.large ?
-                <img src={props.profile.photos.large} className={classes.avatar}/>
+                {profile.photos.large ?
+                <img src={profile.photos.large} className={classes.avatar}/>
                 : <img src={userPhoto} className={classes.avatar}/>}
-                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
                 <div className={classes.fullName}>
-                    Меня зовут {props.profile.fullName}
+                    Меня зовут {profile.fullName}
                 </div>
                 <div className={classes.aboutMe}>
-                    Обо мне: {props.profile.aboutMe}
+                    Обо мне: {profile.aboutMe}
                 </div>
                 <div className={classes.contacts}>
                     Мои контакты:
                     <div className={classes.contact}>
                         <img src={facebookIcon}/>
-                        {props.profile.contacts.facebook}
+                        {profile.contacts.facebook}
                     </div>
                     <div className={classes.contact}>
                         <img src={githubIcon}/>
-                        {props.profile.contacts.github}
+                        {profile.contacts.github}
                     </div>
                     <div className={classes.contact}>
                         <img src={instagramIcon}/>
-                        {props.profile.contacts.instagram}
+                        {profile.contacts.instagram}
                     </div>
                     <div className={classes.contact}>
                         <img src={mainLinkIcon}/>
-                        {props.profile.contacts.mainLink}
+                        {profile.contacts.mainLink}
                     </div>
                     <div className={classes.contact}>
                         <img src={twitterIcon}/>
-                        {props.profile.contacts.twitter}
+                        {profile.contacts.twitter}
                     </div>
                     <div className={classes.contact}>
                         <img src={vkIcon}/>
-                        {props.profile.contacts.vk}
+                        {profile.contacts.vk}
                     </div>
                     <div className={classes.contact}>
                         <img src={websiteIcon}/>
-                        {props.profile.contacts.website}
+                        {profile.contacts.website}
                     </div>
                     <div className={classes.contact}>
                         <img src={youtubeIcon}/>
-                        {props.profile.contacts.yotube}
+                        {profile.contacts.yotube}
                     </div>
                 </div>
                 <div>
-                    {props.profile.lookingForAJob ? 'Ищу' : 'Не ищу'} работу
+                    {profile.lookingForAJob ? 'Ищу' : 'Не ищу'} работу
                 </div>
                 <div>
-                    {props.profile.lookingForAJobDescription}
+                    {profile.lookingForAJobDescription}
                 </div>
             </div>
         </div>
