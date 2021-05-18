@@ -1,17 +1,10 @@
 
-.mainimg img {
-    position: absolute;
-    height: 300px;
-    width: 900px;
-    z-index: 1;
-}
 .descriptionBlock {
-    position: relative;
-    padding-top: 160px;
-    padding-left: 20px;
-    z-index: 10;
+    display: flex;
+    padding: 20px;
 }
-.descriptionBlock img{
+.description{
+    margin-left: 150px;
 
 }
 .avatar {

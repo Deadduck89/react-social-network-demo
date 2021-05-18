@@ -18,61 +18,63 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
     }
     return (
         <div>
-            <div className={classes.mainimg}>
-                <img src='https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png'/>
-            </div>
             <div className={classes.descriptionBlock}>
-                {profile.photos.large ?
-                <img src={profile.photos.large} className={classes.avatar}/>
-                : <img src={userPhoto} className={classes.avatar}/>}
-                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
-                <div className={classes.fullName}>
-                    Меня зовут {profile.fullName}
+                <div className={classes.avatar}>
+                    {profile.photos.large ?
+                        <img src={profile.photos.large} className={classes.avatar}/>
+                        : <img src={userPhoto} className={classes.avatar}/>}
                 </div>
-                <div className={classes.aboutMe}>
-                    Обо мне: {profile.aboutMe}
+                <div className={classes.description}>
+                    <div className={classes.fullName}>
+                        Меня зовут {profile.fullName}
+                    </div>
+                    <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+                    <div className={classes.aboutMe}>
+                        Обо мне: {profile.aboutMe}
+                    </div>
+                    <div className={classes.contacts}>
+                        Мои контакты:
+                        <div className={classes.contact}>
+                            <img src={facebookIcon}/>
+                            {profile.contacts.facebook}
+                        </div>
+                        <div className={classes.contact}>
+                            <img src={githubIcon}/>
+                            {profile.contacts.github}
+                        </div>
+                        <div className={classes.contact}>
+                            <img src={instagramIcon}/>
+                            {profile.contacts.instagram}
+                        </div>
+                        <div className={classes.contact}>
+                            <img src={mainLinkIcon}/>
+                            {profile.contacts.mainLink}
+                        </div>
+                        <div className={classes.contact}>
+                            <img src={twitterIcon}/>
+                            {profile.contacts.twitter}
+                        </div>
+                        <div className={classes.contact}>
+                            <img src={vkIcon}/>
+                            {profile.contacts.vk}
+                        </div>
+                        <div className={classes.contact}>
+                            <img src={websiteIcon}/>
+                            {profile.contacts.website}
+                        </div>
+                        <div className={classes.contact}>
+                            <img src={youtubeIcon}/>
+                            {profile.contacts.yotube}
+                        </div>
+                    </div>
+                    <div>
+                        {profile.lookingForAJob ? 'Ищу' : 'Не ищу'} работу
+                    </div>
+                    <div>
+                        {profile.lookingForAJobDescription}
+                    </div>
                 </div>
-                <div className={classes.contacts}>
-                    Мои контакты:
-                    <div className={classes.contact}>
-                        <img src={facebookIcon}/>
-                        {profile.contacts.facebook}
-                    </div>
-                    <div className={classes.contact}>
-                        <img src={githubIcon}/>
-                        {profile.contacts.github}
-                    </div>
-                    <div className={classes.contact}>
-                        <img src={instagramIcon}/>
-                        {profile.contacts.instagram}
-                    </div>
-                    <div className={classes.contact}>
-                        <img src={mainLinkIcon}/>
-                        {profile.contacts.mainLink}
-                    </div>
-                    <div className={classes.contact}>
-                        <img src={twitterIcon}/>
-                        {profile.contacts.twitter}
-                    </div>
-                    <div className={classes.contact}>
-                        <img src={vkIcon}/>
-                        {profile.contacts.vk}
-                    </div>
-                    <div className={classes.contact}>
-                        <img src={websiteIcon}/>
-                        {profile.contacts.website}
-                    </div>
-                    <div className={classes.contact}>
-                        <img src={youtubeIcon}/>
-                        {profile.contacts.yotube}
-                    </div>
-                </div>
-                <div>
-                    {profile.lookingForAJob ? 'Ищу' : 'Не ищу'} работу
-                </div>
-                <div>
-                    {profile.lookingForAJobDescription}
-                </div>
+
             </div>
         </div>
     )
