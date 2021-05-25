@@ -12,8 +12,9 @@ import HeaderContainer from "./Components/Header/HeaderContainer";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
-import Preloader from "./Components/Common/Preloader";
+import Preloader from "./Components/Common/Preloader/Preloader";
 import store from "./redux/redux-store";
+import ErrorBoundary from "./Components/Common/ErrorBoundary/ErrorBoundary";
 
 const DialogsContainer = React.lazy( () => import('.//Components/Dialogs/DialogsContainer') );
 const ProfileContainer = React.lazy( () => import('./Components/Profile/ProfileContainer') );
@@ -38,14 +39,16 @@ class App extends React.Component {
                         <Route path='/news' component={News}/>
                         <Route path='/music' component={Music}/>
                         <Route path='/settings' component={Settings}/>
-                        <Suspense fallback={<Preloader/>}>
-                            <Route path='/dialogs'
-                                   render={() =>
-                                       <DialogsContainer/>}/>
-                            <Route path='/profile/:userId?'
-                                   render={() => <ProfileContainer/>}/>
-                            <Route path='/login' render={() => <LoginPage/>}/>
-                        </Suspense>
+                        <ErrorBoundary>
+                            <Suspense fallback={<Preloader/>}>
+                                <Route path='/dialogs'
+                                       render={() =>
+                                           <DialogsContainer/>}/>
+                                <Route path='/profile/:userId?'
+                                       render={() => <ProfileContainer/>}/>
+                                <Route path='/login' render={() => <LoginPage/>}/>
+                            </Suspense>
+                        </ErrorBoundary>
                         <Route path='/users'
                                render={() => <UsersContainer/>}/>
                         <Route path='/friends' render={() => <Friends/>}/>

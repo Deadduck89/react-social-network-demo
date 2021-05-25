@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './ProfileInfo.module.css';
-import Preloader from "../../Common/Preloader";
+import Preloader from "../../Common/Preloader/Preloader";
 import facebookIcon from '../../../assets/social-icons/iconfinder_Facebook-1_669610.png';
 import githubIcon from '../../../assets/social-icons/iconfinder_social-79_2285234.png';
 import instagramIcon from '../../../assets/social-icons/iconfinder_Instagram_3709561.png';
