@@ -12,9 +12,15 @@
 .loginBlock {
     float: right;
     margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .loginBlock a {
     text-decoration: none;
     color: black;
+}
+
+.username {
+    font-size: 20px;
 }

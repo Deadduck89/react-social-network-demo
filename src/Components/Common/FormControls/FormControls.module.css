@@ -13,21 +13,23 @@
     padding: 5px;
     color: rosybrown;
 }
-.loginButton{
+.loginButton,.logoutButton {
     height: 40px;
     width: 120px;
+    margin-left: 20px;
     font-weight: 500;
     font-size: 20px;
     font-family: Arial;
     color: black;
     text-decoration: none;
     border-radius: 3px;
-    background: aquamarine;
-    box-shadow: 0 -3px rgb(53,167,110) inset;
+    background: #ff9133;
+    box-shadow: 0 -3px #f57100 inset;
     transition: 0.2s;
 }
-.loginButton:hover { background: rgb(53, 167, 110); }
-.loginButton:active {
-    background: rgb(33,147,90);
-    box-shadow: 0 3px rgb(33,147,90) inset;
+.loginButton:hover, .logoutButton:hover { background: #f57100; }
+.loginButton:active, .logoutButton:active {
+    background: #eb9347;
+    box-shadow: 0 3px #dd8c00 inset;
 }
+

@@ -1,6 +1,4 @@
-
-
-.addPost {
+.sendButton {
     height: 40px;
     width: 120px;
     margin-left: 20px;
@@ -14,7 +12,7 @@
     box-shadow: 0 -3px #f57100 inset;
     transition: 0.2s;
 }
-.addPost:hover { background: #f57100; }
-.addPost:active {
+.sendButton:hover { background: #f57100; }
+.sendButton:active {
     background: #eb9347;
     box-shadow: 0 3px #dd8c00 inset;}
