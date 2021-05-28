@@ -1,0 +1,15 @@
+.login {
+    margin-left: 35%;
+}
+
+.loginForm {
+    width: 170px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #ff9133;
+}
+.loginButton {
+    margin-top: 10px;
+}

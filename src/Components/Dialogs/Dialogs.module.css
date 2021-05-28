@@ -19,10 +19,28 @@
     text-decoration: underline;
 }
 .messages {
+    width: 450px;
+    min-height: 200px;
     padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ff9133;
 }
 .dialog img {
     height: 40px;
     width: 40px;
     border-radius: 40px;
+}
+.message {
+    width: 50%;
+    margin-top: 10px;
+    padding: 5px;
+    font-family: Arial;
+    font-weight: 500;
+    background-color: #f9b87b;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #ff9133;
 }

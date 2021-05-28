@@ -2,11 +2,12 @@ import React from "react";
 import styles from "./Users.module.css";
 import userPhoto from "../../assets/img/no-avatar.png";
 import {NavLink} from "react-router-dom";
+import Button from "../Common/Button/Button";
 
 let User = ({user, followingInProgress, unfollow, follow}) => {
-    return <div>
+    return <div className={styles.userList}>
         <span>
-                    <div>
+                    <div className={styles.user}>
                         <NavLink to={'/profile/' + user.id}>
                         <img src={user.photos.small != null ? user.photos.small : userPhoto}
                              className={styles.userPhoto}/>
@@ -14,14 +15,14 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
                     </div>
                     <div>
                         {user.followed ?
-                            <button disabled={followingInProgress.some( id => id === user.id )} onClick={() => {
+                            <Button type="unfollow" disabled={followingInProgress.some( id => id === user.id )} onClick={() => {
                                 unfollow( user.id )
                             }
-                            }>Unfollow</button> :
-                            <button disabled={followingInProgress.some( id => id === user.id )} onClick={() => {
+                            }/> :
+                            <Button type="follow" disabled={followingInProgress.some( id => id === user.id )} onClick={() => {
                                 follow( user.id )
                             }
-                            }>Follow</button>}
+                            }/>}
                     </div>
                 </span>
         <span>

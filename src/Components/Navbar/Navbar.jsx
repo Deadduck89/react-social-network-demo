@@ -9,22 +9,22 @@ const Navbar = (props) => {
         <div className={classes.navbar}>
         <nav className={classes.nav}>
             <div className={classes.item}>
-                    <NavLink to='/profile' activeClassName={classes.active}>Profile</NavLink>
+                    <NavLink to='/profile' activeClassName={classes.active}>Профиль</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/dialogs' activeClassName={classes.active}>Messages</NavLink>
+                <NavLink to='/dialogs' activeClassName={classes.active}>Диалоги</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/news' activeClassName={classes.active}>News</NavLink>
+                <NavLink to='/users' activeClassName={classes.active}>Пользователи</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/music' activeClassName={classes.active}>Music</NavLink>
+                <NavLink to='/news' activeClassName={classes.active}>Новости</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/settings' activeClassName={classes.active}>Settings</NavLink>
+                <NavLink to='/music' activeClassName={classes.active}>Музыка</NavLink>
             </div>
             <div className={classes.item}>
-                <NavLink to='/users' activeClassName={classes.active}>Users</NavLink>
+                <NavLink to='/settings' activeClassName={classes.active}>Настройки</NavLink>
             </div>
         </nav>
             <div>

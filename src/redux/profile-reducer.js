@@ -7,8 +7,8 @@ const DELETE_POST = 'DELETE-POST';
 
 let initialState = {
     posts: [
-        {id: 1, post: 'Hi, how are you?', likesCount: 15, avatar: 'https://clck.ru/RaH6Z'},
-        {id: 2, post: "It's my first post", likesCount: 20, avatar: 'https://clck.ru/RaH7G'},
+        {id: 1, post: 'Привет, как вы?', likesCount: 15, avatar: 'https://clck.ru/RaH6Z'},
+        {id: 2, post: "Это мой первый пост", likesCount: 20, avatar: 'https://clck.ru/RaH6Z'},
     ],
     profile: null,
     status: ""

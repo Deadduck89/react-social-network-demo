@@ -1,0 +1,105 @@
+.loginButton {
+    height: 40px;
+    width: 120px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Arial;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    background: #ff9133;
+    box-shadow: 0 -3px #f57100 inset;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.loginButton:hover { background: #f57100; }
+.loginButton:active {
+    background: #eb9347;
+    box-shadow: 0 3px #dd8c00 inset;
+}
+
+
+.logoutButton {
+    height: 20px;
+    width: 60px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 10px;
+    font-family: Arial;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    background: #ff9133;
+    box-shadow: 0 -3px #f57100 inset;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.logoutButton:hover { background: #f57100; }
+.logoutButton:active {
+    background: #eb9347;
+    box-shadow: 0 3px #dd8c00 inset;
+}
+
+
+.send {
+    height: 30px;
+    width: 140px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Arial;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    background: #ff9133;
+    box-shadow: 0 -3px #f57100 inset;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.send:hover { background: #f57100; }
+.send:active {
+    background: #eb9347;
+    box-shadow: 0 3px #dd8c00 inset;
+}
+
+.followButton {
+    height: 35px;
+    width: 120px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Arial;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    background: #ff9133;
+    box-shadow: 0 -3px #f57100 inset;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.followButton:hover { background: #f57100; }
+.followButton:active {
+    background: #eb9347;
+    box-shadow: 0 3px #dd8c00 inset;
+}
+
+
+.button {
+    height: 40px;
+    width: 120px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Arial;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    background: #ff9133;
+    box-shadow: 0 -3px #f57100 inset;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.button:hover { background: #f57100; }
+.button:active {
+    background: #eb9347;
+    box-shadow: 0 3px #dd8c00 inset;
+}

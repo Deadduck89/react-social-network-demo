@@ -1,10 +1,26 @@
 .post {
-    color: darkgreen;
+    display: grid;
+    grid-template-areas: "img text likes";
+    grid-template-columns: 100px 10fr 2fr;
 }
 
-.post img {
+.avatar {
+    grid-area: img;
+}
+
+.avatar img {
     height: 50px;
     width: 50px;
     border-radius: 30px;
-
 }
+
+.message {
+    padding-top: 5px;
+    grid-area: text;
+}
+
+.likes {
+    grid-area: likes;
+    padding-top: 5px;
+}
+

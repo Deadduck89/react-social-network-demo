@@ -26,48 +26,50 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                 </div>
                 <div className={classes.description}>
                     <div className={classes.fullName}>
-                        Меня зовут {profile.fullName}
+                        {profile.fullName}
                     </div>
+                    <div className={classes.status}>
                     <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
-                    <div className={classes.aboutMe}>
-                        Обо мне: {profile.aboutMe}
                     </div>
+                    {profile.aboutMe && <div className={classes.aboutMe}>
+                        Обо мне: {profile.aboutMe}
+                    </div>}
                     <div className={classes.contacts}>
                         Мои контакты:
-                        <div className={classes.contact}>
+                        {profile.contacts.facebook && <div className={classes.contact}>
                             <img src={facebookIcon}/>
                             {profile.contacts.facebook}
-                        </div>
-                        <div className={classes.contact}>
+                        </div>}
+                        {profile.contacts.github && <div className={classes.contact}>
                             <img src={githubIcon}/>
                             {profile.contacts.github}
-                        </div>
-                        <div className={classes.contact}>
+                        </div>}
+                        {profile.contacts.instagram && <div className={classes.contact}>
                             <img src={instagramIcon}/>
                             {profile.contacts.instagram}
-                        </div>
-                        <div className={classes.contact}>
+                        </div>}
+                        {profile.contacts.mainLink && <div className={classes.contact}>
                             <img src={mainLinkIcon}/>
                             {profile.contacts.mainLink}
-                        </div>
-                        <div className={classes.contact}>
+                        </div>}
+                        {profile.contacts.twitter && <div className={classes.contact}>
                             <img src={twitterIcon}/>
                             {profile.contacts.twitter}
-                        </div>
-                        <div className={classes.contact}>
+                        </div>}
+                        {profile.contacts.vk && <div className={classes.contact}>
                             <img src={vkIcon}/>
                             {profile.contacts.vk}
-                        </div>
-                        <div className={classes.contact}>
+                        </div>}
+                        {profile.contacts.website && <div className={classes.contact}>
                             <img src={websiteIcon}/>
                             {profile.contacts.website}
-                        </div>
-                        <div className={classes.contact}>
+                        </div>}
+                        {profile.contacts.yotube && <div className={classes.contact}>
                             <img src={youtubeIcon}/>
                             {profile.contacts.yotube}
-                        </div>
+                        </div>}
                     </div>
-                    <div>
+                    <div className={classes.job}>
                         {profile.lookingForAJob ? 'Ищу' : 'Не ищу'} работу
                     </div>
                     <div>

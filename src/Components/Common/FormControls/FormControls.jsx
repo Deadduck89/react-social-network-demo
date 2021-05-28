@@ -7,7 +7,7 @@ function formControl(tag) {
         const hasError = touched && error
         return (
             <div className={styles.formControl + " " + (hasError ? styles.error : "")}>
-                <div>
+                <div className={styles.form}>
                     {React.createElement( tag, {...input, ...props} )}
                 </div>
                 <div>
@@ -23,7 +23,7 @@ export const Textarea = formControl( 'textarea' )
 export const Input = formControl( 'input' )
 
 export const createField = (placeholder, name, component, validator, props={}, text="") => {
-    return <div>
+    return <div className={styles.loginField}>
         <Field placeholder={placeholder}
                name={name}
                component={component}

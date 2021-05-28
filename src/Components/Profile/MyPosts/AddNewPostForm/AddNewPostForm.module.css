@@ -1,20 +1,12 @@
-
-
-.addPost {
-    height: 40px;
-    width: 120px;
-    margin-left: 20px;
-    font-weight: 500;
-    font-size: 20px;
-    font-family: Arial;
-    color: black;
-    text-decoration: none;
-    border-radius: 3px;
-    background: #ff9133;
-    box-shadow: 0 -3px #f57100 inset;
-    transition: 0.2s;
+.addPostForm {
+    display: flex;
+    flex-direction: column;
 }
-.addPost:hover { background: #f57100; }
-.addPost:active {
-    background: #eb9347;
-    box-shadow: 0 3px #dd8c00 inset;}
+
+.addPostField {
+    height: 50px;
+    width: 300px;
+    border-width: 3px;
+    border-color: #ff9133;
+    border-radius: 2px;
+}

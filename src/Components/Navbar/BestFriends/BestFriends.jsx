@@ -13,7 +13,7 @@ const BestFriends = (props) => {
     return (
         <div>
             <div className={classes.friends}>
-                <NavLink to='/friends' activeClassName={classes.active}>Friends</NavLink>
+                <NavLink to='/friends' activeClassName={classes.active}>Друзья</NavLink>
             </div>
             <div className={classes.bestfriends}>
                     {bfElement}

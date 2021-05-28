@@ -2,16 +2,16 @@ const SEND_MESSAGE = 'SEND-MESSAGE';
 
 let initialState = {
     messages: [
-        {id:1, message: 'Hi!'},
-        {id:2, message: 'Ti mne bil kak brat!'},
-        {id:3, message: 'Dasha tut'},
+        {id:1, message: 'Привет!'},
+        {id:2, message: 'Как жизнь?'},
+        {id:3, message: 'Пожалуй, напишу позже)'},
     ],
     dialogs: [
-        {id: 1, user: 'Andrew', avatar: 'https://clck.ru/RaH6Z'},
-        {id: 2, user: 'Igor', avatar: 'https://clck.ru/RQNNi' },
-        {id: 3, user: 'Sergey', avatar: 'https://clck.ru/RaH7G'},
-        {id: 4, user: 'Irina', avatar: 'https://clck.ru/RaH87'},
-        {id: 5, user: 'Dasha', avatar: 'https://clck.ru/RhWYy'}
+        {id: 1, user: 'Андрей', avatar: 'https://clck.ru/RaH6Z'},
+        {id: 2, user: 'Игорь', avatar: 'https://clck.ru/RQNNi' },
+        {id: 3, user: 'Сергей', avatar: 'https://clck.ru/RaH7G'},
+        {id: 4, user: 'Ирина', avatar: 'https://clck.ru/RaH87'},
+        {id: 5, user: 'Даша', avatar: 'https://clck.ru/RhWYy'}
     ]
 }
 

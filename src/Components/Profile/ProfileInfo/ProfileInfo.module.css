@@ -4,11 +4,11 @@
     padding: 20px;
 }
 .description{
-    margin-left: 150px;
+    margin-left: 100px;
 
 }
 .avatar {
-    height:150px;
+    height:250px;
     border-style: solid;
     border-radius: 20px;
     border-width: 3px;
@@ -16,7 +16,36 @@
     background-color: aliceblue;
 }
 
+.fullName {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Arial";
+}
+
+.aboutMe {
+    margin-top: 20px;
+}
+
+.contacts {
+    margin-top: 20px;
+}
+
 .contact img {
     height: 15px;
     padding: 5px 5px 0px 5px;
+}
+
+.job {
+    margin-top: 20px;
+}
+
+.status {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.status:hover {
+    background-color: #ffb270;
 }
