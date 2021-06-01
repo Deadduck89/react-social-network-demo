@@ -2,9 +2,9 @@
   "name": "react-kamasutra-01",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://deadduck89.github.io/react-social-network-demo",
+  "homepage": "https://deadduck89.github.io/react-social-network-demo/",
   "dependencies": {
-    "@fontsource/roboto": "^4.3.0",
+    "@fontsource/roboto": "^4.4.2",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
@@ -51,6 +51,6 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "gh-pages": "^3.2.0",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.14.0"
   }
 }
