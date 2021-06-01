@@ -2,7 +2,7 @@
   "name": "react-kamasutra-01",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://deadduck89.github.io/react-social-network-demo/",
+  "homepage": "https://deadduck89.github.io/react-social-network-demo",
   "dependencies": {
     "@fontsource/roboto": "^4.4.2",
     "@testing-library/react": "^9.5.0",

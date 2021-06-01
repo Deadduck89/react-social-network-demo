@@ -5,7 +5,7 @@ import Music from "./Components/Music/Music";
 import News from "./Components/News/News";
 import Settings from "./Components/Settings/Settings";
 import Friends from "./Components/Friends/Friends"
-import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, withRouter} from "react-router-dom";
 import classes from "./App.module.css"
 import UsersContainer from "./Components/Users/UsersContainer.jsx";
 import HeaderContainer from "./Components/Header/HeaderContainer";
@@ -70,9 +70,9 @@ const SamuraiJSApp = (props) => {
     return (
         <React.StrictMode>
             <Provider store={store}>
-                <BrowserRouter>
+                <HashRouter>
                     <AppContainer/>
-                </BrowserRouter>
+                </HashRouter>
             </Provider>
         </React.StrictMode>
     )
