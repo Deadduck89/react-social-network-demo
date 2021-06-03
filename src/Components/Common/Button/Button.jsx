@@ -26,7 +26,12 @@ const Button = (props) => {
             )
         case 'avatarChange':
             return (
-                <input className={style.avatarChange} type={'file'} onChange={props.onMainPhotoSelected}/>
+                <div className={style.inputWrapper}>
+                <input className={style.inputFile} type={'file'} id='inputFile' onChange={props.onMainPhotoSelected}/>
+                    <label htmlFor="inputFile" className={style.inputFileButton}>
+                        <span className={style.inputFileButtonText}>Выберите файл</span>
+                    </label>
+                </div>
             )
         default:
             return (

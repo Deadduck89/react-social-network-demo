@@ -103,3 +103,48 @@
     background: #eb9347;
     box-shadow: 0 3px #dd8c00 inset;
 }
+
+.inputWrapper {
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.inputFile {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.inputFileButtonText {
+    padding-left: 20%;
+    line-height: 1;
+}
+
+.inputFileButton {
+    height: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Arial;
+    color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 3px;
+    background: #ff9133;
+    box-shadow: 0 -3px #f57100 inset;
+    transition: 0.2s;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+.inputFileButton:hover { background: #f57100; }
+.inputFileButton:active {
+    background: #eb9347;
+    box-shadow: 0 3px #dd8c00 inset;
+}
