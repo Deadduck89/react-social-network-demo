@@ -2,6 +2,7 @@ import React from "react";
 import style from "./Button.module.css"
 
 const Button = (props) => {
+
     switch (props.type ) {
         case 'login':
             return (
@@ -22,6 +23,10 @@ const Button = (props) => {
         case 'unfollow':
             return (
                 <button className={style.followButton} onClick={props.onClick} disabled={props.disabled}>Отписаться</button>
+            )
+        case 'avatarChange':
+            return (
+                <input className={style.avatarChange} type={'file'} onChange={props.onMainPhotoSelected}/>
             )
         default:
             return (
