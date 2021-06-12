@@ -10,7 +10,7 @@ import websiteIcon from '../../../assets/social-icons/iconfinder_SocialMedia_Web
 import mainLinkIcon from '../../../assets/social-icons/iconfinder__google_chrome_2560108.png';
 import vkIcon from '../../../assets/social-icons/iconfinder_vk_853340.png';
 import userPhoto from '../../../assets/img/no-avatar.png'
-import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import ProfileStatusWithHooks from "./ProfileStatus/ProfileStatusWithHooks";
 import Button from "../../Common/Button/Button";
 
 const ProfileInfo = ({profile, status, updateStatus,isOwner, savePhoto}) => {
