@@ -33,6 +33,10 @@ const Button = (props) => {
                     </label>
                 </div>
             )
+        case 'profileDataChange':
+            return (
+                <button className={style.profileDataChange} onClick={props.toEditMode}>Редактировать профиль</button>
+            )
         default:
             return (
                 <button className={style.button}>Button</button>
