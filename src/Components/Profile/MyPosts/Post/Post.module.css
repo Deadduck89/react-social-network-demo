@@ -1,7 +1,7 @@
 .post {
     display: grid;
     grid-template-areas: "img text likes";
-    grid-template-columns: 100px 10fr 2fr;
+    grid-template-columns: 100px 12fr 2fr;
 }
 
 .avatar {
@@ -21,6 +21,35 @@
 
 .likes {
     grid-area: likes;
+    position: relative;
     padding-top: 5px;
 }
 
+.heart {
+    position: relative;
+    width: 30px;
+    height: 27px;
+    margin: 7px;
+    padding: 7px;
+
+}
+
+.heart:before, .heart:after {
+    position: absolute;
+    margin-top: 10px;
+    content: "";
+    left: 10px;
+    top: 0;
+    width: 10px;
+    height: 16px;
+    background: #ff9133;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}

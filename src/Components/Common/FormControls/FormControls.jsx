@@ -7,8 +7,8 @@ function formControl(tag) {
         const hasError = touched && error
         return (
             <div className={styles.formControl + " " + (hasError ? styles.error : "")}>
-                <div className={styles.form}>
-                    {React.createElement( tag, {...input, ...props} )}
+                <div >
+                    {React.createElement( tag, {...input, ...props, style: {marginTop: "5px",borderStyle: "solid",borderColor: "#ff9133",borderRadius: "3px", }} )}
                 </div>
                 <div>
                     {hasError && <span>{error}</span>}

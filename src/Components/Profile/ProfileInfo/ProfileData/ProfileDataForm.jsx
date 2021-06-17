@@ -4,6 +4,7 @@ import {createField, Input, Textarea} from "../../../Common/FormControls/FormCon
 import classes from "../ProfileInfo.module.css";
 import handleSubmit from "redux-form/lib/handleSubmit";
 import styles from "../../../Common/FormControls/FormControls.module.css";
+import Button from "../../../Common/Button/Button";
 
 
 const ProfileDataForm =({profile, handleSubmit, error}) => {
@@ -32,7 +33,7 @@ const ProfileDataForm =({profile, handleSubmit, error}) => {
                 <b>Мои навыки: </b>
                 {createField('Ваши навыки',"lookingForAJobDescription", Textarea, [] )}
             </div>
-            <button>Сохранить</button>
+            <Button type="saveProfileDataChange">Сохранить</Button>
         </form>
     )
 }

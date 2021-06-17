@@ -1,5 +1,5 @@
 import classes from "../ProfileInfo.module.css";
-import facebookIcon from "../../../../assets/social-icons/iconfinder_Facebook-1_669610.png";
+import {facebook} from "../../../../assets/social-icons/iconfinder_Facebook-1_669610.png";
 import githubIcon from "../../../../assets/social-icons/iconfinder_social-79_2285234.png";
 import instagramIcon from "../../../../assets/social-icons/iconfinder_Instagram_3709561.png";
 import mainLinkIcon from "../../../../assets/social-icons/iconfinder__google_chrome_2560108.png";
@@ -24,12 +24,11 @@ const ProfileData = ({profile, isOwner, toEditMode}) => {
             })}
             </div>
             <div className={classes.job}>
-                <b>Поиск работы</b>
+                <b>Поиск работы:  </b>
                  {profile.lookingForAJob ? 'Ищу' : 'Не ищу'} работу
             </div>
             <div>
-                <b>Мои навыки:</b>
-                 {profile.lookingForAJobDescription}
+                <b>Мои навыки:  </b> {profile.lookingForAJobDescription}
             </div>
             {isOwner && <Button type='profileDataChange' toEditMode={toEditMode}/>}
         </div>

@@ -37,6 +37,10 @@ const Button = (props) => {
             return (
                 <button className={style.profileDataChange} onClick={props.toEditMode}>Редактировать профиль</button>
             )
+        case 'saveProfileDataChange':
+            return (
+                <button className={style.saveProfileDataChange}>Сохранить</button>
+            )
         default:
             return (
                 <button className={style.button}>Button</button>
