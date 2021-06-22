@@ -2,6 +2,9 @@ import React from "react";
 import classes from './Post.module.css';
 
 const Post = (props) => {
+
+    //Отрисовываем аватар, текст, сердце и количество лайков поста
+
     return <div className={classes.post}>
         <div className={classes.avatar}>
             <img src={props.avatar}/>

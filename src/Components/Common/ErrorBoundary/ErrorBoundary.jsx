@@ -1,5 +1,8 @@
 import React from "react";
 
+//Предохранитель, который отобразит сообщение об ошибке,
+//если обернутые в него компоненты упадут
+
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super( props );

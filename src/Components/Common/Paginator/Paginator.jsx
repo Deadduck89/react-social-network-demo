@@ -1,12 +1,21 @@
 import React, {useState} from "react";
 import styles from "./Paginator.module.css";
 
+//Паджинатор для странички юзеров
+
 let Paginator = ({totalItemsCount,pageSize,currentPage,onPageChanged, portionSize=10}) => {
+
+    //Определяем количество страниц: делим общее количество юзеров
+    //на количество, которое отображаем
+
     let pagesCount = Math.ceil( totalItemsCount / pageSize );
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
         pages.push( i );
     }
+
+    //Определям количество цифр для перехода на нужные страницы
+    //и правила отображения кнопок Вперед и Назад
 
     let portionCount = Math.ceil(pagesCount/portionSize);
     let [portionNumber, setPortionNumber] = useState(1);

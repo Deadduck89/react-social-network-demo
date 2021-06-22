@@ -11,6 +11,10 @@ import React from "react";
 import Button from "../../../Common/Button/Button";
 
 const ProfileData = ({profile, isOwner, toEditMode}) => {
+    //Отрисовываем Обо мне, если он не null, маппим массив контактов
+    //для отображения каждого, Поиск работы, Мои навыки, кнопку
+    //для переключения в режим редактирования, если это
+    //профиль залогиненного пользователя
     return (
         <div>
             {profile.aboutMe && <div className={classes.aboutMe}>
@@ -34,6 +38,8 @@ const ProfileData = ({profile, isOwner, toEditMode}) => {
         </div>
     )
 }
+
+//Компонент для отрисовки контакта
 
 const Contact = ({contactTitle, contactValue}) => {
     return (

@@ -3,6 +3,7 @@ import {addPostActionCreator} from "../../../redux/profile-reducer";
 import {connect} from "react-redux";
 import MyPosts from "./MyPosts";
 
+//Получаем из стейта данные постов и текст для добавления нового поста
 
 let mapStateToProps = (state) => {
     return {
@@ -11,6 +12,9 @@ let mapStateToProps = (state) => {
 
     }
 }
+
+//action для добавления нового поста
+
 let mapDispatchToProps = (dispatch) => {
     return {
         onAddPost: (newPostText) => {

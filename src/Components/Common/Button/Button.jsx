@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./Button.module.css"
 
+//Компонент, который отдает разные кнопки в зависимости от типа в пропсах
+
 const Button = (props) => {
 
     switch (props.type ) {

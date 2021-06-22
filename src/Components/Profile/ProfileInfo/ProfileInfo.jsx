@@ -5,25 +5,40 @@ import userPhoto from '../../../assets/img/no-avatar.png'
 import ProfileStatusWithHooks from "./ProfileStatus/ProfileStatusWithHooks";
 import Button from "../../Common/Button/Button";
 import ProfileData from "./ProfileData/ProfileData";
-import ProfileDataForm from "./ProfileData/ProfileDataForm";
 import ProfileDataReduxForm from "./ProfileData/ProfileDataForm";
 
 const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
 
+    //Используем хук useState для переключения профиля в режим редактирования
+
     let [editMode, setEditMode] = useState( false );
+
+    //Крутилка на время, пока сервер не вернул данные профиля
 
     if (!profile) {
         return <Preloader/>
     }
+
+    //Коллбэк для передачи фотографии профиля на сервер
+
     const onMainPhotoSelected = (e) => {
         if (e.target.files.length) {
             savePhoto( e.target.files[0] );
         }
     }
+
+    //Коллбек для передачи данных профиля из форм на сервер и отключения режима редактирования
+    //после ответа
+
     const onSubmit = (formData) => {
         saveProfile( formData ).then(() => {
         setEditMode( false )})
     }
+
+    //Отрисовываем аватар с сервера или стоковую картинку, если сервер не вернул фото,
+    //если это профиль залогиненного пользователя, отображаем кнопку Поменять аватар,
+    //Статус, в зависимости от режима редактирования - Форму данных или форму для
+    //их изменения
     return (
         <div>
             <div className={classes.descriptionBlock}>

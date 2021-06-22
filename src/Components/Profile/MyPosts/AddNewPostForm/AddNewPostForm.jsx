@@ -5,9 +5,14 @@ import {Textarea} from "../../../Common/FormControls/FormControls";
 import styles from "./AddNewPostForm.module.css"
 import Button from "../../../Common/Button/Button";
 
+//Определяем максимальную длину записи
+
 const maxLength100 = maxLengthCreator( 100 );
 
 const AddNewPostForm = (props) => {
+
+    //Отрисовываем форму для добавления постов и кнопку для отправки
+
     return (
         <form className={styles.addPostForm} onSubmit={props.handleSubmit}>
             <div>
@@ -20,6 +25,8 @@ const AddNewPostForm = (props) => {
         </form>
     )
 }
+
+//Оборачиваем компонент в редакс форм
 
 const AddNewPostReduxForm = reduxForm( {form: 'profileAddNewPostForm'} )( AddNewPostForm );
 

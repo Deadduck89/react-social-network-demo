@@ -2,6 +2,8 @@ import React from "react";
 import Loader from "react-loader-spinner";
 import classes from "./Preloader.module.css"
 
+//Отрисовка предзагруженной в приложение крутилки
+
 export default class Preloader extends React.Component {
     render() {
         return (

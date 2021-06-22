@@ -10,6 +10,8 @@ import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 class ProfileContainer extends React.Component {
 
+    //Метод для запроса профиля и статуса по userId в адресной строке, если userId
+    // нет, то загрузится информация залогиненного пользователя
     refreshProfile () {
         let userId = this.props.match.params.userId;
         if (!userId) {
@@ -19,9 +21,14 @@ class ProfileContainer extends React.Component {
         this.props.getStatus(userId);
     }
 
+    //При монтировании компонент запросит инфу для отрисовки страницы профиля
+
     componentDidMount() {
         this.refreshProfile ();
     }
+
+    //При обновлении страницы сравнивается прошлый Id с новым, если они отличаются,
+    // то компонент обновится
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.match.params.userId !== prevProps.match.params.userId) {
         this.refreshProfile ();}
@@ -39,6 +46,8 @@ class ProfileContainer extends React.Component {
     }
 }
 
+//Из стейта получаем текущий профиль и статус из profile-reducer, залогинен ли
+// пользователь и его Id  из auth-reducer
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
@@ -46,6 +55,11 @@ let mapStateToProps = (state) => ({
     authorizedUserId: state.auth.userId,
     isAuth: state.auth.isAuth
 });
+
+//Объединяем самописный хок, который перенаправляет юзера на страницу логина,
+//если он не залогинен, реактовский хок коннект, передаем в пропсы стейт и санки,
+//которые получают данные профиля, статуса, меняют статус, отправляют новое фото
+//меняют данные профиля
 
 export default compose(withAuthRedirect,
     connect( mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto, saveProfile} ),
