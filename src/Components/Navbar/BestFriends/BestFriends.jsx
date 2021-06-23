@@ -3,6 +3,8 @@ import classes from "./BestFriends.module.css";
 import BestFriendElements from "./BFElements/BFElements.jsx";
 import {NavLink} from "react-router-dom";
 
+//Компонент заморожен
+
 const BestFriends = (props) => {
 
     let bfElement = props.friends.map(

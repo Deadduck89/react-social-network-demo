@@ -9,6 +9,8 @@ import styles from "../Common/FormControls/FormControls.module.css"
 import classes from "./Login.module.css"
 import Button from "../Common/Button/Button";
 
+//Форма логина, содержащая email, пароль и чекбокс для запоминания юзера
+
 const LoginForm = ({handleSubmit, error}) => {
     return (
         <form className={classes.loginForm} onSubmit={handleSubmit}>
@@ -25,15 +27,23 @@ const LoginForm = ({handleSubmit, error}) => {
     )
 }
 
+//Обертка формы в Редакс Форм
+
 const LoginReduxForm = reduxForm({form:'login'})(LoginForm)
 
+
 const Login = (props) => {
+    //onSubmit запускает санку login из auth-reducer, которая отправляет
+    //email, пароль и "Запомнить меня" на сервер
     const onSubmit = (formData=>{
         props.login(formData.email, formData.password, formData.rememberMe)
     })
+    //Проверка, залогинен ли пользователь, и редирект на профиль,
+    //если залогинен
     if (props.isAuth) {
         return <Redirect to={"/profile"}/>
     }
+    //Отрисовка заголовка и формы
     return (
     <div className={classes.login}>
         <h3>Войти на сайт</h3>
@@ -41,8 +51,9 @@ const Login = (props) => {
     </div>
     )
 }
-
+//Из стейта забираем состояние логина пользователя
 const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth
 })
+//В пропсы компоненте Login отдаем стейт и санку login
 export default connect(mapStateToProps, {login})(Login);

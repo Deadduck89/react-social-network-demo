@@ -5,7 +5,11 @@ import {maxLengthCreator, required} from "../../../Utils/validators/Validators";
 import styles from "./addMessageForm.module.css"
 import Button from "../../Common/Button/Button";
 
+//Определяем максимальную длину сообщения в 100 для валидатора
+
 const maxLength100 = maxLengthCreator( 100 );
+
+//Рисуем форму с одной Textarea и кнопкой
 
 const AddMessageForm = (props) => {
     return (
@@ -19,6 +23,10 @@ const AddMessageForm = (props) => {
         </form>
     )
 }
+
+//Оборачиваем форму в Редакс Форм
+
+
 const AddMessageReduxForm = reduxForm( {form: 'dialogAddMessageForm'} )( AddMessageForm )
 
 export default AddMessageReduxForm

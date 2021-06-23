@@ -1,6 +1,8 @@
 import React from "react";
 import classes from './Friends.module.css'
 
+//Пока не работает
+
 const Friends = (props) => {
     return (
         <div className={classes.friends}>

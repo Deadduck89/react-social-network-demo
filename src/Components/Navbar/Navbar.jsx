@@ -1,8 +1,11 @@
 import React from "react";
 import classes from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
-import BestFriends from "./BestFriends/BestFriends";
-import BestFriendsContainer from "./BestFriends/BestFriendsContainer";
+
+//Компонент, отвечающий за отрисовку бокового меню
+//НавЛинки на профиль, диалоги и список юзеров
+//Новости, Музыка, настройка и список из трех
+//лучших друзей не используются
 
 const Navbar = (props) => {
     return (

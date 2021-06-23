@@ -1,6 +1,7 @@
 import React from "react";
 import classes from './../Dialogs.module.css';
 
+//Компонент для отрисовки каждого сообщения
 
 const Message = (props) => {
     return (
