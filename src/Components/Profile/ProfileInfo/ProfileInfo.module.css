@@ -49,3 +49,15 @@
 .status:hover {
     background-color: #ffb270;
 }
+
+.contact {
+    display: flex;
+}
+.contactKey {
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.jobSearch {
+    display: flex;
+}

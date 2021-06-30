@@ -22,13 +22,14 @@ const ProfileDataForm =({profile, handleSubmit, error}) => {
                 <b>Мои контакты:</b> {Object.keys(profile.contacts).map(key => {
                 return(
                     <div key={key} className={classes.contact}>
-                        <b>{key}: </b> {createField( key,"contacts." + key, Input, [] )}
+                        <div className={classes.contactKey}><b>{key}: </b></div>
+                        <div className={classes.contactField}>{createField( key,"contacts." + key, Input, [] )}</div>
                     </div>
                 )
             })}
             </div>
 
-            <div>
+            <div className={classes.jobSearch}>
                 <b>Поиск работы: </b>
                 {createField('Поиск работы',"lookingForAJob", Input, [], {type: "checkbox"})}
             </div>

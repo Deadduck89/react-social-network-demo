@@ -21,3 +21,8 @@
     border-color: #ff9133;
 }
 
+.loginField {
+    display: flex;
+    margin-top: 5px;
+}
+

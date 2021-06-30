@@ -11,7 +11,7 @@ let Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, users, ...p
                        totalItemsCount={totalUsersCount}
                        pageSize={pageSize}/>
         </div>
-        <div>
+        <div className={styles.users}>
             {
                 users.map( user => <User user={user}
                                          followingInProgress={props.followingInProgress}
