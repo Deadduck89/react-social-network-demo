@@ -9,6 +9,7 @@ import website from "../../../../assets/social-icons/iconfinder_SocialMedia_Webs
 import youtube from "../../../../assets/social-icons/iconfinder_youtube-social-network-brand-logo_1820429.png";
 import React from "react";
 import Button from "../../../Common/Button/Button";
+import Contact from "./Contact/Contact";
 
 const ProfileData = ({profile, isOwner, toEditMode}) => {
     //Отрисовываем Обо мне, если он не null, маппим массив контактов
@@ -41,12 +42,6 @@ const ProfileData = ({profile, isOwner, toEditMode}) => {
 
 //Компонент для отрисовки контакта
 
-const Contact = ({contactTitle, contactValue}) => {
-    return (
-        <div>
-            <b>{contactTitle}:</b> {contactValue}
-        </div>
-    )
-}
+
 
 export default ProfileData;
