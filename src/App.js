@@ -1,11 +1,8 @@
 import React, {Suspense} from 'react';
 import './App.module.css';
 import Navbar from "./Components/Navbar/Navbar";
-import Music from "./Components/Music/Music";
-import News from "./Components/News/News";
-import Settings from "./Components/Settings/Settings";
 import Friends from "./Components/Friends/Friends"
-import {BrowserRouter, HashRouter, Route, withRouter} from "react-router-dom";
+import { HashRouter, Route, withRouter} from "react-router-dom";
 import classes from "./App.module.css"
 import UsersContainer from "./Components/Users/UsersContainer.jsx";
 import HeaderContainer from "./Components/Header/HeaderContainer";

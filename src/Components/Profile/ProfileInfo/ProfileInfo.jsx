@@ -43,7 +43,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
         <div>
             <div className={classes.descriptionBlock}>
                 <div>
-                    <img src={profile.photos.large || userPhoto} className={classes.avatar}/>
+                    <img src={profile.photos.large || userPhoto} className={classes.avatar} alt="avatar"/>
                     {isOwner && <Button type='avatarChange' onMainPhotoSelected={onMainPhotoSelected}/>}
                 </div>
                 <div className={classes.description}>

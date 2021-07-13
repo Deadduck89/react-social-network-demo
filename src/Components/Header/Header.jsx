@@ -13,7 +13,7 @@ const Header = (props) => {
     //логина
 
     return <header className={classes.header}>
-        <img src={logo}/>
+        <img src={logo} alt="logo"/>
         <div className={classes.loginBlock}>
             {props.isAuth
                 ? <div>
