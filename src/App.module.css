@@ -1,7 +1,7 @@
 .appWrapper {
     margin: 0 auto;
     display: grid;
-    width: 1200px;
+    width: 90%;
     min-height: 720px;
     grid-template-areas: "h h" "n c";
     grid-template-rows: 60px 1fr;

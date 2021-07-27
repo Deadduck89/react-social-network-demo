@@ -10,6 +10,7 @@ import classes from "./Login.module.css"
 import Button from "../Common/Button/Button";
 
 //Форма логина, содержащая email, пароль и чекбокс для запоминания юзера
+//Если форма получает урл капчи, то появляется картинка и поле капчи
 
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (

@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 import './App.module.css';
 import Navbar from "./Components/Navbar/Navbar";
 import Friends from "./Components/Friends/Friends"
-import { HashRouter, Route, withRouter} from "react-router-dom";
+import {HashRouter, Redirect, Route, Switch, withRouter} from "react-router-dom";
 import classes from "./App.module.css"
 import UsersContainer from "./Components/Users/UsersContainer.jsx";
 import HeaderContainer from "./Components/Header/HeaderContainer";
@@ -20,9 +20,15 @@ const LoginPage = React.lazy( () => import('./Components/Login/Login') );
 
 class App extends React.Component {
 
+    catchAllUnhandledErrors = (promiseRejectionEvent) => {
+        alert( 'Произошла ошибка' );
+    }
+
     componentDidMount() {
         this.props.initializeApp();
+        window.addEventListener( "unhandledrejection", this.catchAllUnhandledErrors )
     }
+
 
     render() {
         if (!this.props.initialized) {
@@ -36,19 +42,25 @@ class App extends React.Component {
                         {/*<Route path='/news' component={News}/>
                         <Route path='/music' component={Music}/>
                         <Route path='/settings' component={Settings}/>*/}
-                        <ErrorBoundary>
-                            <Suspense fallback={<Preloader/>}>
-                                <Route path='/dialogs'
-                                       render={() =>
-                                           <DialogsContainer/>}/>
-                                <Route path='/profile/:userId?'
-                                       render={() => <ProfileContainer/>}/>
-                                <Route path='/login' render={() => <LoginPage/>}/>
-                            </Suspense>
-                        </ErrorBoundary>
-                        <Route path='/users'
-                               render={() => <UsersContainer/>}/>
-                        <Route path='/friends' render={() => <Friends/>}/>
+                        <Switch>
+                            <ErrorBoundary>
+                                <Suspense fallback={<Preloader/>}>
+                                    <Route exact path='/'
+                                           render={() => <Redirect to='/profile'/>}/>
+                                    <Route path='/profile/:userId?'
+                                           render={() => <ProfileContainer/>}/>
+                                    <Route path='/dialogs'
+                                           render={() =>
+                                               <DialogsContainer/>}/>
+                                    <Route path='/login' render={() => <LoginPage/>}/>
+                                </Suspense>
+                            </ErrorBoundary>
+                            <Route path='/users'
+                                   render={() => <UsersContainer/>}/>
+                            <Route path='/friends' render={() => <Friends/>}/>
+                            <Route exact path='*' render={() => <div>PAGE 404 NOT FOUND</div>}/>
+                        </Switch>
+
 
                     </div>
                 </div>
@@ -57,22 +69,22 @@ class App extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    initialized: state.app.initialized
-})
+        const mapStateToProps = (state) => ({
+            initialized: state.app.initialized
+        })
 
-let AppContainer = compose( withRouter, connect( mapStateToProps, {initializeApp} ) )( App );
+        let AppContainer = compose( withRouter, connect( mapStateToProps, {initializeApp} ) )( App );
 
-const SamuraiJSApp = (props) => {
-    return (
-        <React.StrictMode>
-            <Provider store={store}>
-                <HashRouter>
-                    <AppContainer/>
-                </HashRouter>
-            </Provider>
-        </React.StrictMode>
-    )
-}
+        const SamuraiJSApp = (props) => {
+            return (
+                <React.StrictMode>
+                    <Provider store={store}>
+                        <HashRouter>
+                            <AppContainer/>
+                        </HashRouter>
+                    </Provider>
+                </React.StrictMode>
+            )
+        }
 
-export default SamuraiJSApp;
+        export default SamuraiJSApp;
