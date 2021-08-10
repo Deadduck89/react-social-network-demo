@@ -20,13 +20,17 @@ const LoginPage = React.lazy( () => import('./Components/Login/Login') );
 
 class App extends React.Component {
 
-    catchAllUnhandledErrors = (promiseRejectionEvent) => {
+    catchAllUnhandledErrors = (reason, promise) => {
         alert( 'Произошла ошибка' );
     }
 
     componentDidMount() {
         this.props.initializeApp();
         window.addEventListener( "unhandledrejection", this.catchAllUnhandledErrors )
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener( "unhandledrejection", this.catchAllUnhandledErrors )
     }
 
 
