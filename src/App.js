@@ -13,7 +13,7 @@ import Preloader from "./Components/Common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import ErrorBoundary from "./Components/Common/ErrorBoundary/ErrorBoundary";
 
-const DialogsContainer = React.lazy( () => import('.//Components/Dialogs/DialogsContainer') );
+const DialogsContainer = React.lazy( () => import('./Components/Dialogs/DialogsContainer') );
 const ProfileContainer = React.lazy( () => import('./Components/Profile/ProfileContainer') );
 const LoginPage = React.lazy( () => import('./Components/Login/Login') );
 
