@@ -54,10 +54,11 @@ class App extends React.Component {
                                            render={() =>
                                                <DialogsContainer/>}/>
                                     <Route path='/login' render={() => <LoginPage/>}/>
+                                    <Route path='/users'
+                                           render={() => <UsersContainer/>}/>
                                 </Suspense>
                             </ErrorBoundary>
-                            <Route path='/users'
-                                   render={() => <UsersContainer/>}/>
+
                             <Route path='/friends' render={() => <Friends/>}/>
                             <Route exact path='*' render={() => <div>PAGE 404 NOT FOUND</div>}/>
                         </Switch>
