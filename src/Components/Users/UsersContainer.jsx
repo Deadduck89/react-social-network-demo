@@ -19,9 +19,6 @@ import {
 
 class UsersContainer extends React.Component {
 
-    //Грык жарко. Код работать. Код не сломан.
-    //Грык не понимать. Грык не трогать.
-
     componentDidMount() {
         const {currentPage, pageSize} = this.props;
         this.props.getUsers(currentPage, pageSize);

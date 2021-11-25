@@ -43,9 +43,6 @@ class App extends React.Component {
                     <HeaderContainer/>
                     <Navbar/>
                     <div className={classes.appWrapperContent}>
-                        {/*<Route path='/news' component={News}/>
-                        <Route path='/music' component={Music}/>
-                        <Route path='/settings' component={Settings}/>*/}
                         <Switch>
                             <ErrorBoundary>
                                 <Suspense fallback={<Preloader/>}>
